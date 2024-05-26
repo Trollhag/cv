@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.c-switch {
+  &::after {
+    content: "";
+  }
+}
+
+.c-timeline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: .25em;
+    bottom: 0;
+    border-bottom: .15em solid;
+    border-color: inherit;
+    width: 1em;
+  }
+}
+.c-timeline > * {
+  position: relative;
+  padding-left: 2em;
+  border-color: inherit;
+  &::before {
+    content: "";
+    position: absolute;
+    left: .25em;
+    top: .45em;
+    border: .15em solid;
+    border-color: inherit;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: .70em;
+    top: 1.45em;
+    bottom: -.45em;
+    border: .1em solid;
+    border-color: inherit;
+  }
+  &:last-child::after {
+    bottom: 0;
+  }
+}
+
+.c-bracket {
+  position: relative;
+  border-left-width: .15em;
+  border-right-width: .15em;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: .3em;
+    border-top-width: .15em;
+    border-bottom-width: .15em;
+    border-color: inherit;
+  }
+  &::after {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media print {
+  .print-hidden {
+    display: none;
+  }
+  .print-invisible {
+    visibility: hidden;
+  }
+  .print-bg {
+    -webkit-print-color-adjust: exact; 
+    -moz-print-color-adjust: exact; 
+    print-color-adjust: exact; 
+  }
+}
