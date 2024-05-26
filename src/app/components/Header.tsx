@@ -12,7 +12,7 @@ export default function Header() {
     document.documentElement.classList.toggle('dark', !!darkMode)
   }, [darkMode])
   return (
-    <header className="position-absolute top-0 flex justify-end">
+    <header className="fixed top-0 w-full flex justify-end">
       <button
         className="print-hidden m-4 bg-slate-300 dark:bg-slate-800 w-10 h-10 rounded-full shadow"
         onClick={() => {

@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white dark:bg-slate-900 min-h-screen`}>
+      <body className={`${inter.className} bg-white dark:bg-slate-900 min-h-screen py-8`}>
         <Header />
         {children}
       </body>

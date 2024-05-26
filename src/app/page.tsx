@@ -14,21 +14,21 @@ import Certificates from "@/data/certificates.json";
 
 export default function Home() {
   const headerList = [
-    { icon: <MailIcon className="ml-auto" />, text: "oscar@trollhag.com", href: "mailto:oscar@trollhag.com" },
-    { icon: <PhoneIcon className="ml-auto" />, text: "+46 762 72 99 13", href: "tel:+46 762 72 99 13" },
-    { icon: <PinIcon className="ml-auto" />, text: "Gothenburg, Sweden" },
-    { icon: <LinkedInIcon className="ml-auto" />, text: "linkedin.com/in/oscar-trollhag", href: "https://www.linkedin.com/in/oscar-trollhag/" },
-    { icon: <GitHubIcon className="ml-auto" />, text: "github.com/trollhag", href: "https://github.com/trollhag" },
+    { icon: <MailIcon className="inline-block" />, text: "oscar@trollhag.com", href: "mailto:oscar@trollhag.com" },
+    { icon: <PhoneIcon className="inline-block" />, text: "+46 762 72 99 13", href: "tel:+46 762 72 99 13" },
+    { icon: <PinIcon className="inline-block" />, text: "Gothenburg, Sweden" },
+    { icon: <LinkedInIcon className="inline-block" />, text: "linkedin.com/in/oscar-trollhag", href: "https://www.linkedin.com/in/oscar-trollhag/" },
+    { icon: <GitHubIcon className="inline-block" />, text: "github.com/trollhag", href: "https://github.com/trollhag" },
   ]
 
   return (
     <main role="document" className="print:max-w-none print:w-unset w-[850px] max-w-full px-8 mx-auto">
-      <div className="grid gap-4 grid-cols-2 justify-between mx-8">
+      <div className="grid gap-4 md:grid-cols-2 print:grid-cols-2 justify-between mx-8">
         <div>
-          <h1 className="text-2xl md:text-5xl print:text-5xl">Oscar Trollhag</h1>
-          <h2 className="text-lg md:text-2xl print:text-2xl text-emerald-600">Full Stack Developer</h2>
+          <h1 className="text-4xl md:text-5xl print:text-5xl">Oscar Trollhag</h1>
+          <h2 className="text-xl md:text-2xl print:text-2xl text-emerald-600">Full Stack Developer</h2>
         </div>
-        <div>
+        <div className="hidden md:block print:block">
           <ul className="">
             {headerList.map(({ icon, text, href }, i) => {
               const render = [text, <span key={icon.key} className="display-block w-8 text-emerald-600">{icon}</span>]
@@ -105,8 +105,24 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mt-4 mb-2 border-b-2 border-emerald-600">References</h3>
+          <p className="pl-8">
+            See my recommendations on my <Link href="https://www.linkedin.com/in/oscar-trollhag/" target="_blank">LinkedIn</Link>. Contact information can be given upon request.
+          </p>
         </div>
       </div>
+      
+      <ul className="pt-8 md:hidden print:hidden">
+        {headerList.map(({ icon, text, href }, i) => {
+          const render = [<span key={icon.key} className="display-block w-8 text-emerald-600">{icon}</span>, text]
+          return (
+            <li key={i} className="flex items-center mb-1">
+              {href ? <Link href={href} className="underline flex items-center justify-end">{render}</Link> : render}
+            </li>
+          )
+        })}
+      </ul>
     </main>
   );
 }
