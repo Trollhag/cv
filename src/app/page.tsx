@@ -1,10 +1,11 @@
 // @refresh reset
 import Link from "next/link";
-import Mail from "../../public/Mail.svg";
-import Phone from "../../public/phone.svg";
-import Pin from "../../public/pin.svg";
-import LinkedIn from "../../public/linkedin.svg";
-import GitHub from "../../public/github.svg";
+
+import MailIcon from "../../public/mail.svg";
+import PhoneIcon from "../../public/phone.svg";
+import PinIcon from "../../public/pin.svg";
+import LinkedInIcon from "../../public/linkedin.svg";
+import GitHubIcon from "../../public/github.svg";
 
 import WorkExperience from "@/data/work-experience.json";
 import Education from "@/data/education.json";
@@ -13,11 +14,11 @@ import Certificates from "@/data/certificates.json";
 
 export default function Home() {
   const headerList = [
-    { icon: <Mail className="ml-auto" />, text: "oscar@trollhag.com", href: "mailto:oscar@trollhag.com" },
-    { icon: <Phone className="ml-auto" />, text: "+46 762 72 99 13", href: "tel:+46 762 72 99 13" },
-    { icon: <Pin className="ml-auto" />, text: "Gothenburg, Sweden" },
-    { icon: <LinkedIn className="ml-auto" />, text: "linkedin.com/in/oscar-trollhag", href: "https://www.linkedin.com/in/oscar-trollhag/" },
-    { icon: <GitHub className="ml-auto" />, text: "github.com/trollhag", href: "https://github.com/trollhag" },
+    { icon: <MailIcon className="ml-auto" />, text: "oscar@trollhag.com", href: "mailto:oscar@trollhag.com" },
+    { icon: <PhoneIcon className="ml-auto" />, text: "+46 762 72 99 13", href: "tel:+46 762 72 99 13" },
+    { icon: <PinIcon className="ml-auto" />, text: "Gothenburg, Sweden" },
+    { icon: <LinkedInIcon className="ml-auto" />, text: "linkedin.com/in/oscar-trollhag", href: "https://www.linkedin.com/in/oscar-trollhag/" },
+    { icon: <GitHubIcon className="ml-auto" />, text: "github.com/trollhag", href: "https://github.com/trollhag" },
   ]
 
   return (
