@@ -1,5 +1,6 @@
 "use client"
-import React, { InputHTMLAttributes, useRef } from "react";
+
+import { InputHTMLAttributes, useRef } from "react";
 
 export interface SwitchProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
