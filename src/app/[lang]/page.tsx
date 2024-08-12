@@ -21,7 +21,7 @@ export default async function BaseHome({ params }: { params: { lang: keyof typeo
   ]
 
   return (
-    <main role="document" className="print:max-w-none print:w-unset w-[850px] max-w-full px-3 md:px-8 mx-auto">
+    <main role="document" className="print:max-w-none print:w-unset w-[870px] max-w-full px-3 md:px-8 mx-auto">
       <div className="flex justify-between items-center mx-3 md:mx-8">
         <Image src={portrait} alt="portrait" width={270} height={270} unoptimized className="rounded-full border-2 border-emerald-600 shadow max-w-full w-28 sm:w-52 md:w-60" />
         <div className="grow pl-4">

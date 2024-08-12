@@ -1,5 +1,5 @@
 export const work = {
-  "title": "",
+  "title": "Experiences",
   "items": [
     {
       "title": "Full Stack Developer",
@@ -10,7 +10,7 @@ export const work = {
       ],
       "location": "Remote",
       "description": [
-        "Development of SaaS platform with multiple APIs och websites, several apps using React Native with parts in Java and Swift using the bluetooth API to communicate with external hardware."
+        "Agile development using an adapted scrum methodology, of several APIs, web apps, and React Native apps. Automated regression and end-to-end tests in back end systems, manual tests in apps. Code review in the form of Pull Requests Reviews on GitHub, and pair programming to both streamline code and promote knowledge exchange. Small team where several, including myself, work remotely. Everyone is responsible for all systems functioning and performing as they should, but each developer has specialist expertise in one or more systems, or specific parts of systems, and assists colleagues with blockages in these."
       ]
     },
     {
@@ -22,7 +22,7 @@ export const work = {
       ],
       "location": "",
       "description": [
-        "Development of tailored websites using WordPress, React, Vue, and many other tools."
+        "Development of tailored websites, mostly in WordPress, and integration with SaaS solutions that the customer had or wanted. As the sole developer at the workplace, I was responsible for everything related to technology, from the intranet and NAS, to printers, computers, and Office 365. But also to ensure that both the customer and the user got what they needed and wanted, and to assist designers by providing suggestions on UX and showing what is technically possible. We had some interns now and then, that I got to mentor and teach everything they needed to help with the projects."
       ]
     },
     {
@@ -34,7 +34,7 @@ export const work = {
       ],
       "location": "",
       "description": [
-        "Development of web applications for ticket machines."
+        "Development of web apps for physical ticket machines, with responsibility for the front end. Among other things I built a custom touch framework, since the machines had very old touch screens which required us to finely adjust many parameters to make it smooth for the user. One app had requirements to be accessible for severely visually impaired people, which should be able to navigate the entire app through swipe gestures and a text-to-speech function."
       ]
     },
     {
@@ -46,7 +46,7 @@ export const work = {
       ],
       "location": "",
       "description": [
-        "Primarily frontend development for multiple sites selling public transport tickets, and web applications for for ticket machines."
+        "Development of a platform for selling public transport tickets, with multiple reskins for various collaborations. I had responsibility for the front end and UX."
       ]
     }
   ]
