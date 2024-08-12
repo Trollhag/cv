@@ -3,6 +3,7 @@ import PhoneIcon from "../../../public/phone.svg";
 import PinIcon from "../../../public/pin.svg";
 import LinkedInIcon from "../../../public/linkedin.svg";
 import GitHubIcon from "../../../public/github.svg";
+import portrait from "../../../public/portrait.jpg";
 
 import type { languages } from "@/lang";
 import { LinkTree, LinkTreeItem } from "../components/LinkTree";
@@ -22,7 +23,7 @@ export default async function BaseHome({ params }: { params: { lang: keyof typeo
   return (
     <main role="document" className="print:max-w-none print:w-unset w-[850px] max-w-full px-3 md:px-8 mx-auto">
       <div className="flex justify-between items-center mx-3 md:mx-8">
-        <Image src="/portrait.jpg" alt="portrait" width={270} height={270} unoptimized className="rounded-full border-2 border-emerald-600 shadow max-w-full w-28 sm:w-52 md:w-60" />
+        <Image src={portrait} alt="portrait" width={270} height={270} unoptimized className="rounded-full border-2 border-emerald-600 shadow max-w-full w-28 sm:w-52 md:w-60" />
         <div className="grow pl-4">
           <LinkTree className="hidden md:block print:block" items={headerList} iconAlign="right" align="right" />
           <h1 className="text-4xl md:text-5xl print:text-5xl mt-4">Oscar Trollhag</h1>
