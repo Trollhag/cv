@@ -10,7 +10,8 @@ export const general = {
         <Link
           href="https://www.linkedin.com/in/oscar-trollhag/"
           target="_blank"
-          className="underline">
+          className="underline"
+        >
           LinkedIn
         </Link>
         . Kontaktinformation kan lämnas ut på begäran.

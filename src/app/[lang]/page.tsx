@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { LinkTree, LinkTreeItem } from '@/app/components/LinkTree'
 import type { languages } from '@/lang'
-import GitHubIcon from '@/public/github.svg'
-import LinkedInIcon from '@/public/linkedin.svg'
-import MailIcon from '@/public/mail.svg'
-import PhoneIcon from '@/public/phone.svg'
-import PinIcon from '@/public/pin.svg'
+import GitHubIcon from '@/public/icons/github.svg'
+import LinkedInIcon from '@/public/icons/linkedin.svg'
+import MailIcon from '@/public/icons/mail.svg'
+import PhoneIcon from '@/public/icons/phone.svg'
+import PinIcon from '@/public/icons/pin.svg'
 import portrait from '@/public/portrait.jpg'
 
 export default async function Page({ params }: { params: { lang: keyof typeof languages } }) {
@@ -41,7 +41,8 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
   return (
     <main
       role="document"
-      className="print:max-w-none print:w-unset w-[870px] max-w-full px-3 md:px-8 mx-auto">
+      className="print:max-w-none print:w-unset w-[870px] max-w-full px-3 md:px-8 mx-auto"
+    >
       <div className="flex justify-between items-center mx-3 md:mx-8">
         <Image
           src={portrait}
@@ -112,7 +113,8 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
             {lang.skills.items.map((skill) => (
               <li
                 key={skill}
-                className="inline-block m-1 px-2 bg-emerald-600 print-bg text-white rounded">
+                className="inline-block m-1 px-2 bg-emerald-600 print-bg text-white rounded"
+              >
                 {skill}
               </li>
             ))}

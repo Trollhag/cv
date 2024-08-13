@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { useEffect, useState, useRef } from 'react'
 import type { languages } from '@/lang'
-import DarkModeIcon from '@/public/darkmode.svg'
+import DarkModeIcon from '@/public/icons/darkmode.svg'
+import LightModeIcon from '@/public/icons/lightmode.svg'
 import EN from '@/public/lang-en.png'
 import SV from '@/public/lang-sv.png'
-import LightModeIcon from '@/public/lightmode.svg'
 
 export const Header = () => {
   const headerRef = useRef<HTMLElement | null>(null)
@@ -30,11 +30,13 @@ export const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`print-hidden flex justify-end p-4 ${headerRef.current ? 'fixed top-0 w-full' : ''}`}>
+        className={`print-hidden flex justify-end p-4 ${headerRef.current ? 'fixed top-0 w-full' : ''}`}
+      >
         <Link
           href={`/${lang === 'en' ? 'sv' : 'en'}`}
           title={lang === 'en' ? 'Svenska' : 'English'}
-          className="mr-2">
+          className="mr-2"
+        >
           <Image
             src={lang === 'en' ? SV : EN}
             width="40"
@@ -50,7 +52,8 @@ export const Header = () => {
           onClick={() => {
             setDarkMode(!darkMode)
             localStorage.setItem('theme', !darkMode ? 'dark' : 'light')
-          }}>
+          }}
+        >
           {darkMode ? (
             <LightModeIcon alt="Light mode" className="m-auto" />
           ) : (
