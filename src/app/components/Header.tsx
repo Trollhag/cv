@@ -31,7 +31,10 @@ export const Header = () => {
       <header
         ref={headerRef}
         className={`print-hidden flex justify-end p-4 ${headerRef.current ? 'fixed top-0 w-full' : ''}`}>
-        <Link href={`/${lang === 'en' ? 'sv' : 'en'}`} className="mr-2">
+        <Link
+          href={`/${lang === 'en' ? 'sv' : 'en'}`}
+          title={lang === 'en' ? 'Svenska' : 'English'}
+          className="mr-2">
           <Image
             src={lang === 'en' ? SV : EN}
             width="40"
@@ -43,6 +46,7 @@ export const Header = () => {
         </Link>
         <button
           className="bg-slate-300 dark:bg-slate-800 w-10 h-10 rounded-full shadow"
+          title={darkMode ? 'Toggle lightmode' : 'Toggle darkmode'}
           onClick={() => {
             setDarkMode(!darkMode)
             localStorage.setItem('theme', !darkMode ? 'dark' : 'light')
