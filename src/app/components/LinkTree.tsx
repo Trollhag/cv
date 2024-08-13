@@ -1,12 +1,18 @@
-import Link from 'next/link'
-import { DetailedHTMLProps, HTMLAttributes, ReactNode, useCallback, useMemo } from 'react'
-import type { Url } from 'url'
+import Link, { LinkProps } from 'next/link'
+import {
+  AnchorHTMLAttributes,
+  DetailedHTMLProps,
+  HTMLAttributes,
+  ReactNode,
+  useCallback,
+  useMemo,
+} from 'react'
 
-export interface LinkTreeItem {
+export type LinkTreeItem = {
   icon?: ReactNode
   text: ReactNode
-  href?: string | Url
-}
+} & Partial<LinkProps> &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps>
 
 export interface LinkTreeProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement> {
