@@ -1,18 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Package from "../../package.json"
+import type { Metadata } from 'next'
+import '@/app/globals.css'
+import { ReactNode } from 'react'
+import Package from '@/package.json'
 
 export const metadata: Metadata = {
   title: `Oscar Trollhag - CV (v${Package.version})`,
-  description: "",
-};
+  description: '',
+}
 
-export default function BaseLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function Layout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }

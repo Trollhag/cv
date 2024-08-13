@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
-export default function RootPage() {
+export default function Page() {
   const router = useRouter()
   useEffect(() => {
     const lang = window.navigator?.language?.split('-').shift() || 'en'

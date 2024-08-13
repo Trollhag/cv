@@ -30,12 +30,6 @@ body {
   }
 }
 
-.c-switch {
-  &::after {
-    content: "";
-  }
-}
-
 .c-timeline {
   position: relative;
   &::after {
