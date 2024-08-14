@@ -16,11 +16,13 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
       icon: <MailIcon className="inline-block" />,
       text: 'oscar@trollhag.com',
       href: 'mailto:oscar@trollhag.com',
+      target: '_blank',
     },
     {
       icon: <PhoneIcon className="inline-block" />,
       text: '+46 762 72 99 13',
       href: 'tel:+46 762 72 99 13',
+      target: '_blank',
     },
     {
       icon: <PinIcon className="inline-block" />,
@@ -30,11 +32,13 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
       icon: <LinkedInIcon className="inline-block" />,
       text: 'linkedin.com/in/oscar-trollhag',
       href: 'https://www.linkedin.com/in/oscar-trollhag/',
+      target: '_blank',
     },
     {
       icon: <GitHubIcon className="inline-block" />,
       text: 'github.com/trollhag',
       href: 'https://github.com/trollhag',
+      target: '_blank',
     },
   ]
 
