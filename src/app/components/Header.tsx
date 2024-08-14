@@ -17,11 +17,9 @@ export const Header = () => {
   const { lang } = useParams<{ lang: keyof typeof languages }>()
 
   useEffect(() => {
-    if (
-      darkMode === null &&
-      (localStorage.theme === 'dark' ||
-        (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches))
-    ) {
+    const cached = localStorage.theme
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (darkMode === null && (cached === 'dark' || (!cached && prefersDarkMode))) {
       setDarkMode(true)
     }
     document.documentElement.classList.toggle('dark', !!darkMode)
@@ -61,13 +59,13 @@ export const Header = () => {
             <DarkModeIcon alt="Dark mode" className="m-auto" />
           )}
         </button>
-          <button
-            className="bg-slate-300 dark:bg-slate-800 w-10 h-10 rounded-full shadow"
-            title={lang === 'en' ? 'Print' : 'Skriv ut'}
+        <button
+          className="bg-slate-300 dark:bg-slate-800 w-10 h-10 rounded-full shadow"
+          title={lang === 'en' ? 'Print' : 'Skriv ut'}
           onClick={() => typeof window?.print === 'function' && window.print()}
-          >
-            <PrintIcon alt="Print" className="m-auto" />
-          </button>
+        >
+          <PrintIcon alt="Print" className="m-auto" />
+        </button>
       </header>
       {headerRef.current && (
         <div className="print-hidden" style={{ height: headerRef.current?.clientHeight }} />
