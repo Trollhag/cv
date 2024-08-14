@@ -61,15 +61,13 @@ export const Header = () => {
             <DarkModeIcon alt="Dark mode" className="m-auto" />
           )}
         </button>
-        {typeof window?.print === 'function' && (
           <button
             className="bg-slate-300 dark:bg-slate-800 w-10 h-10 rounded-full shadow"
             title={lang === 'en' ? 'Print' : 'Skriv ut'}
-            onClick={() => window.print()}
+          onClick={() => typeof window?.print === 'function' && window.print()}
           >
             <PrintIcon alt="Print" className="m-auto" />
           </button>
-        )}
       </header>
       {headerRef.current && (
         <div className="print-hidden" style={{ height: headerRef.current?.clientHeight }} />
