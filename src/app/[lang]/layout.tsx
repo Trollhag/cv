@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
-import { Header } from '@/app/components/Header'
+import { Actions } from '@/app/components/Actions'
 import Package from '@/package.json'
 import '@/app/globals.css'
 
@@ -22,9 +22,11 @@ export default function Layout({
 }: Readonly<{ children: ReactNode; params: { lang: string } }>) {
   return (
     <html lang={params.lang}>
-      <body className={`${inter.className} bg-white dark:bg-slate-900 min-h-screen pb-8`}>
-        <Header />
+      <body
+        className={`${inter.className} bg-white dark:bg-slate-900 min-h-screen pt-4 sm:pt-20 pb-20 sm:pb-4 print:p-0`}
+      >
         {children}
+        <Actions />
       </body>
     </html>
   )
