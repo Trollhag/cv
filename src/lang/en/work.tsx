@@ -21,20 +21,11 @@ export const work = {
     },
     {
       title: 'Web Developer',
-      company: 'GITU - Göranson IT-utveckling',
-      date: ['01/2017', '02/2017'],
+      company: 'Gerisys Payment Solutions AB',
+      date: ['10/2014', '02/2017'],
       location: '',
       description: [
         'Development of web apps for physical ticket machines, with responsibility for the front end. Among other things I built a custom touch framework, since the machines had very old touch screens which required us to finely adjust many parameters to make it smooth for the user. One app had requirements to be accessible for severely visually impaired people, which should be able to navigate the entire app through swipe gestures and a text-to-speech function.',
-      ],
-    },
-    {
-      title: 'Web Developer',
-      company: 'Gerisys Payment Solutions AB',
-      date: ['10/2014', '12/2016'],
-      location: '',
-      description: [
-        'Development of a platform for selling public transport tickets, with multiple reskins for various collaborations. I had responsibility for the front end and UX.',
       ],
     },
   ],
