@@ -9,7 +9,7 @@ import PinIcon from '@/public/icons/pin.svg'
 import portrait from '@/public/portrait.jpg'
 
 export default async function Page({ params }: { params: { lang: keyof typeof languages } }) {
-  const lang: typeof languages.en = await import(`@/lang/${params.lang}`)
+  const lang: (typeof languages)[keyof typeof languages] = await import(`@/lang/${params.lang}`)
 
   const headerList: LinkTreeItem[] = [
     {
@@ -43,10 +43,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
   ]
 
   return (
-    <main
-      role="document"
-      className="print:max-w-none print:w-unset w-[870px] max-w-full px-3 md:px-8 mx-auto"
-    >
+    <main role="document" className="w-[970px] max-w-full print:w-auto px-3 md:px-8 mx-auto">
       <div className="flex justify-between items-center mx-3 md:mx-8">
         <Image
           src={portrait}
@@ -69,7 +66,6 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
           </h2>
         </div>
       </div>
-      <div className="mx-3 md:mx-8"></div>
       {lang.presentation.role.map((str) => (
         <p key={str} className="my-4 mx-3 md:mx-8">
           {str}
@@ -81,24 +77,23 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
           {str}
         </p>
       ))}
-      <div className="grid gap-4 md:grid-cols-5 justify-between">
-        <div className="md:col-span-3">
+      <div className="grid gap-4 sm:grid-cols-12 justify-between">
+        <div className="md:col-span-7 print:col-span-8">
           <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
             {lang.work.title}
           </h3>
           <div className="c-timeline border-emerald-600">
             {lang.work.items.map((item, i) => (
               <div key={i} className="pb-4">
-                <h4 className="text-lg">
-                  <b>{item.title}</b>
-                  <br />
-                  {item.company}
-                </h4>
-                <div className="flex justify-between my-2">
-                  <span className="bg-emerald-600 bg-opacity-15 px-2 rounded text-emerald-700 print-bg">
-                    {item.date.join(' - ')}
-                  </span>
-                  <span>{item.location}</span>
+                <div className="">
+                  <h4 className="text-lg">
+                    <b>{item.title}</b> &ndash; {item.company}
+                  </h4>
+                  <p className="">
+                    <span className="bg-emerald-600 bg-opacity-15 px-2 mr-2 rounded text-emerald-700 print-bg">
+                      {item.date.join(' - ')}
+                    </span>
+                  </p>
                 </div>
                 <ul className="c-bracket border-emerald-600 pr-3 py-1">
                   {item.description.map((desc) => (
@@ -109,8 +104,29 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
             ))}
           </div>
         </div>
-        <div className="md:col-span-2 print:grid gap-4 print:grid-cols-5">
-          <div className="print:col-span-3 mb-4">
+        <div className="md:col-span-5 print:col-span-4 gap-4">
+          <div className="mb-4">
+            <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
+              {lang.education.title}
+            </h3>
+            <div className="mx-3 md:mx-8">
+              {lang.education.items.map((item, i) => (
+                <div key={i}>
+                  <h4 className="text-lg">
+                    <b>{item.title}</b>
+                    <br />
+                    {item.institution}
+                  </h4>
+                  <div className="flex justify-between my-2">
+                    <span className="bg-emerald-600 bg-opacity-15 px-2 rounded text-emerald-700 print-bg">
+                      {item.date.join(' - ')}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.skills.title}
             </h3>
@@ -126,7 +142,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
               <li className="inline-block m-1 px-2 rounded">{lang.skills.expand}</li>
             </ul>
           </div>
-          <div className="print:col-span-2 mb-4">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.skills.languages.title}
             </h3>
@@ -148,7 +164,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
               ))}
             </ul>
           </div>
-          <div className="print:col-span-3 mb-4">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.certificates.title}
             </h3>
@@ -160,28 +176,19 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
               ))}
             </ul>
           </div>
-          <div className="print:col-span-2 mb-4">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
-              {lang.education.title}
+              {lang.other.title}
             </h3>
-            <div className="mx-3 md:mx-8">
-              {lang.education.items.map((item, i) => (
-                <div key={i}>
-                  <h4 className="text-lg">
-                    <b>{item.title}</b>
-                    <br />
-                    {item.institution}
-                  </h4>
-                  <div className="flex justify-between my-2">
-                    <span className="bg-emerald-600 bg-opacity-15 px-2 rounded text-emerald-700 print-bg">
-                      {item.date.join(' - ')}
-                    </span>
-                  </div>
-                </div>
+            <ul className="mx-3 md:mx-8">
+              {lang.other.items.map((merit, i) => (
+                <li key={i} className="my-2">
+                  {merit.title}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-          <div className="print:col-span-3">
+          <div className="">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.general.references.title}
             </h3>

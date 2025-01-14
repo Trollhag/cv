@@ -16,12 +16,9 @@ html.dark {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -32,6 +29,7 @@ body {
 
 .c-timeline {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -42,10 +40,12 @@ body {
     width: 1em;
   }
 }
-.c-timeline > * {
+
+.c-timeline>* {
   position: relative;
   padding-left: 2em;
   border-color: inherit;
+
   &::before {
     content: "";
     position: absolute;
@@ -57,6 +57,7 @@ body {
     height: 1em;
     border-radius: 100%;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -66,6 +67,7 @@ body {
     border: .1em solid;
     border-color: inherit;
   }
+
   &:last-child::after {
     bottom: 0;
   }
@@ -88,6 +90,7 @@ body {
     border-bottom-width: .15em;
     border-color: inherit;
   }
+
   &::after {
     left: auto;
     right: 0;
@@ -98,12 +101,19 @@ body {
   .print-hidden {
     display: none;
   }
+
   .print-invisible {
     visibility: hidden;
   }
+
   .print-bg {
-    -webkit-print-color-adjust: exact; 
-    -moz-print-color-adjust: exact; 
-    print-color-adjust: exact; 
+    -webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    font-size: 13px;
   }
 }

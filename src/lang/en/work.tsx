@@ -2,10 +2,19 @@ export const work = {
   title: 'Experiences',
   items: [
     {
+      title: 'Freelance Consultant',
+      company: 'Sole Proprietorship',
+      date: ['10/2023'],
+      location: '',
+      description: [
+        "Running a sole proprietorship where I provide development and enhancement of websites and digital services, content moderation, and technical support. My focus is on delivering exceptional service and solutions tailored to the client's needs and expectations.",
+      ],
+    },
+    {
       title: 'Full Stack Developer',
       company: 'Qlocx iBoxen Digital AB',
       date: ['12/2021', '07/2024'],
-      location: 'Remote',
+      location: '',
       description: [
         'Agile development using an adapted scrum methodology, of several APIs, web apps, and React Native apps. Automated regression and end-to-end tests in back end systems, manual tests in apps. Code review in the form of Pull Requests Reviews on GitHub, and pair programming to both streamline code and promote knowledge exchange. Small team where several, including myself, work remotely. Everyone is responsible for all systems functioning and performing as they should, but each developer has specialist expertise in one or more systems, or specific parts of systems, and assists colleagues with blockages in these.',
       ],

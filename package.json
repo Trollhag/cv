@@ -1,6 +1,6 @@
 {
   "name": "@trollhag/cv",
-  "version": "1.1.5",
+  "version": "1.6.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,15 +14,15 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "next": "14.2.3",
+    "next": "^14.2.23",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@trollhag/eslint-config": "^0.0.1",
-    "@trollhag/prettier-config": "^0.0.2",
+    "@trollhag/eslint-config": "^0.0.3",
+    "@trollhag/prettier-config": "^0.0.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
