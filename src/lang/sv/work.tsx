@@ -4,7 +4,7 @@ export const work = {
     {
       title: 'Frilanskonsult',
       company: 'Enskild firma',
-      date: ['10/2023'],
+      date: ['10/2023', 'Pågående'],
       location: '',
       description: [
         'Driver en enskild firma där jag erbjuder utveckling och vidareutveckling av hemsidor och digitala tjänster, content-moderering och teknisk support. Mitt fokus ligger på att leverera exceptionell service och lösningar som är anpassade efter kundens behov och önskemål.',

@@ -4,7 +4,7 @@ export const work = {
     {
       title: 'Freelance Consultant',
       company: 'Sole Proprietorship',
-      date: ['10/2023'],
+      date: ['10/2023', 'Ongoing'],
       location: '',
       description: [
         "Running a sole proprietorship where I provide development and enhancement of websites and digital services, content moderation, and technical support. My focus is on delivering exceptional service and solutions tailored to the client's needs and expectations.",
@@ -20,7 +20,7 @@ export const work = {
       ],
     },
     {
-      title: 'Full Stack Web Developer',
+      title: 'Full Stack Developer',
       company: 'Business & Emotions Sweden AB',
       date: ['03/2017', '12/2021'],
       location: '',
