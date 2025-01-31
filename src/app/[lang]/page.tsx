@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
           width={270}
           height={270}
           unoptimized
-          className="rounded-full border-2 border-emerald-600 shadow max-w-full w-28 sm:w-52 md:w-60"
+          className="rounded-full border-4 border-emerald-600 shadow-lg max-w-full w-28 sm:w-52 md:w-60"
         />
         <div className="grow pl-4">
           <LinkTree
