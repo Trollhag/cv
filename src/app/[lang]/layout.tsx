@@ -10,6 +10,15 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: `Oscar Trollhag - CV (v${Package.version})`,
   description: '',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-192x192.png', sizes: '192x192' },
+      { url: '/favicon-512x512.png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon-512x512.png',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export async function generateStaticParams() {
