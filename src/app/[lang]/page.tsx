@@ -24,27 +24,27 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
       href: 'tel:+46 762 72 99 13',
       target: '_blank',
     },
-    {
-      icon: <PinIcon className="inline-block" />,
-      text: lang.general.location,
-    },
-    {
-      icon: <LinkedInIcon className="inline-block" />,
-      text: 'linkedin.com/in/oscar-trollhag',
-      href: 'https://www.linkedin.com/in/oscar-trollhag/',
-      target: '_blank',
-    },
-    {
-      icon: <GitHubIcon className="inline-block" />,
-      text: 'github.com/trollhag',
-      href: 'https://github.com/trollhag',
-      target: '_blank',
-    },
+    // {
+    //   icon: <PinIcon className="inline-block" />,
+    //   text: lang.general.location,
+    // },
+    // {
+    //   icon: <LinkedInIcon className="inline-block" />,
+    //   text: 'linkedin.com/in/oscar-trollhag',
+    //   href: 'https://www.linkedin.com/in/oscar-trollhag/',
+    //   target: '_blank',
+    // },
+    // {
+    //   icon: <GitHubIcon className="inline-block" />,
+    //   text: 'github.com/trollhag',
+    //   href: 'https://github.com/trollhag',
+    //   target: '_blank',
+    // },
   ]
 
   return (
     <main role="document" className="w-[970px] max-w-full print:w-auto px-3 md:px-8 mx-auto">
-      <div className="flex justify-between items-center mx-3 md:mx-8">
+      {/* <div className="flex justify-between items-center mx-3 md:mx-8 mb-3">
         <Image
           src={portrait}
           alt="portrait"
@@ -65,8 +65,8 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
             {lang.general.workTitle}
           </h2>
         </div>
-      </div>
-      {lang.presentation.role.map((str) => (
+      </div> */}
+      {/* {lang.presentation.role.map((str) => (
         <p key={str} className="my-4 mx-3 md:mx-8">
           {str}
         </p>
@@ -76,35 +76,27 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
         <p key={str} className="my-4 mx-3 md:mx-8">
           {str}
         </p>
-      ))}
+      ))} */}
       <div className="grid gap-4 sm:grid-cols-12 justify-between">
-        <div className="md:col-span-7 print:col-span-8">
-          <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
-            {lang.work.title}
-          </h3>
-          <div className="c-timeline border-emerald-600">
-            {lang.work.items.map((item, i) => (
-              <div key={i} className="pb-4">
-                <div className="">
-                  <h4 className="text-lg">
-                    <b>{item.title}</b> &ndash; {item.company}
-                  </h4>
-                  <p className="">
-                    <span className="bg-emerald-600 bg-opacity-15 px-2 mr-2 rounded text-emerald-700 print-bg">
-                      {item.date.join(' - ')}
-                    </span>
-                  </p>
-                </div>
-                <ul className="c-bracket border-emerald-600 pr-3 py-1">
-                  {item.description.map((desc) => (
-                    <li key={desc}>{desc}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
         <div className="md:col-span-5 print:col-span-4 gap-4">
+          <div className="mb-4">
+            <Image
+              src={portrait}
+              alt="portrait"
+              width={270}
+              height={270}
+              unoptimized
+              className="rounded-full border-4 border-emerald-600 shadow-lg max-w-full w-28 sm:w-52 md:w-60 mx-auto"
+            />
+            <h1 className="text-center text-4xl md:text-5xl print:text-5xl mt-4">Oscar Trollhag</h1>
+            <h2 className="text-center text-xl md:text-2xl print:text-2xl text-emerald-600 mb-4">
+              {lang.general.workTitle}
+            </h2>
+            <LinkTree
+              className="hidden md:block print:block"
+              items={headerList}
+            />
+          </div>
           <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.education.title}
@@ -176,7 +168,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
               ))}
             </ul>
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.other.title}
             </h3>
@@ -187,12 +179,38 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
           <div className="">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.general.references.title}
             </h3>
             <p className="mx-3 md:mx-8">{lang.general.references.description}</p>
+          </div>
+        </div>
+        <div className="md:col-span-7 print:col-span-8">
+          <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
+            {lang.work.title}
+          </h3>
+          <div className="c-timeline border-emerald-600">
+            {lang.work.items.map((item, i) => (
+              <div key={i} className="pb-4">
+                <div className="">
+                  <h4 className="text-lg">
+                    <b>{item.title}</b> &ndash; {item.company}
+                  </h4>
+                  <p className="">
+                    <span className="bg-emerald-600 bg-opacity-15 px-2 mr-2 rounded text-emerald-700 print-bg">
+                      {item.date.join(' - ')}
+                    </span>
+                  </p>
+                </div>
+                <ul className="c-bracket border-emerald-600 pr-3 py-1">
+                  {item.description.map((desc) => (
+                    <li key={desc}>{desc}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
