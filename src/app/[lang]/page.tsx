@@ -24,22 +24,22 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
       href: 'tel:+46 762 72 99 13',
       target: '_blank',
     },
-    // {
-    //   icon: <PinIcon className="inline-block" />,
-    //   text: lang.general.location,
-    // },
-    // {
-    //   icon: <LinkedInIcon className="inline-block" />,
-    //   text: 'linkedin.com/in/oscar-trollhag',
-    //   href: 'https://www.linkedin.com/in/oscar-trollhag/',
-    //   target: '_blank',
-    // },
-    // {
-    //   icon: <GitHubIcon className="inline-block" />,
-    //   text: 'github.com/trollhag',
-    //   href: 'https://github.com/trollhag',
-    //   target: '_blank',
-    // },
+    {
+      icon: <PinIcon className="inline-block" />,
+      text: lang.general.location,
+    },
+    {
+      icon: <LinkedInIcon className="inline-block" />,
+      text: 'linkedin.com/in/oscar-trollhag',
+      href: 'https://www.linkedin.com/in/oscar-trollhag/',
+      target: '_blank',
+    },
+    {
+      icon: <GitHubIcon className="inline-block" />,
+      text: 'github.com/trollhag',
+      href: 'https://github.com/trollhag',
+      target: '_blank',
+    },
   ]
 
   return (
@@ -88,14 +88,11 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
               unoptimized
               className="rounded-full border-4 border-emerald-600 shadow-lg max-w-full w-28 sm:w-52 md:w-60 mx-auto"
             />
-            <h1 className="text-center text-4xl md:text-5xl print:text-5xl mt-4">Oscar Trollhag</h1>
+            <h1 className="text-center text-4xl md:text-5xl print:text-4xl mt-4">Oscar Trollhag</h1>
             <h2 className="text-center text-xl md:text-2xl print:text-2xl text-emerald-600 mb-4">
               {lang.general.workTitle}
             </h2>
-            <LinkTree
-              className="hidden md:block print:block"
-              items={headerList}
-            />
+            <LinkTree className="hidden md:block print:block" items={headerList} />
           </div>
           <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
@@ -168,7 +165,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
               ))}
             </ul>
           </div>
-          {/* <div className="mb-4">
+          <div className="mb-4">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.other.title}
             </h3>
@@ -179,7 +176,7 @@ export default async function Page({ params }: { params: { lang: keyof typeof la
                 </li>
               ))}
             </ul>
-          </div> */}
+          </div>
           <div className="">
             <h3 className="text-2xl font-bold uppercase pl-8 pb-1 mb-2 border-b-2 border-emerald-600">
               {lang.general.references.title}
