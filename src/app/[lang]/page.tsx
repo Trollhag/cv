@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { LinkTree, LinkTreeItem } from '@/app/components/LinkTree'
+import GitHubIcon from '@/icons/github.svg'
+import LinkedInIcon from '@/icons/linkedin.svg'
+import MailIcon from '@/icons/mail.svg'
+import PhoneIcon from '@/icons/phone.svg'
+import PinIcon from '@/icons/pin.svg'
 import type { languages } from '@/lang'
-import GitHubIcon from '@/public/icons/github.svg'
-import LinkedInIcon from '@/public/icons/linkedin.svg'
-import MailIcon from '@/public/icons/mail.svg'
-import PhoneIcon from '@/public/icons/phone.svg'
-import PinIcon from '@/public/icons/pin.svg'
-import portrait from '@/public/portrait.jpg'
+import portrait from '@/portrait.jpg'
 
 export default async function Page(
   props: Readonly<{ params: Promise<{ lang: keyof typeof languages }> }>,
