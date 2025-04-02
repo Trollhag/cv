@@ -2,15 +2,6 @@ export const work = {
   title: 'Erfarenheter',
   items: [
     {
-      title: 'Frilanskonsult',
-      company: 'Enskild firma',
-      date: ['10/2023', 'Pågående'],
-      location: '',
-      description: [
-        'Driver en enskild firma där jag erbjuder utveckling och vidareutveckling av hemsidor och digitala tjänster, content-moderering och teknisk support. Mitt fokus ligger på att leverera exceptionell service och lösningar som är anpassade efter kundens behov och önskemål.',
-      ],
-    },
-    {
       title: 'Fullstack-utvecklare',
       company: 'Qlocx iBoxen Digital AB',
       date: ['12/2021', '07/2024'],
@@ -26,6 +17,15 @@ export const work = {
       location: '',
       description: [
         'Utveckling av skräddarsydda hemsidor, mestadels i WordPress, och integrering mot SaaS lösningar som kund hade eller ville ha. Som ensam utvecklare på arbetsplatsen ansvarade jag för allt gällande teknik, allt från intranätet och NAS, till skrivare, datorer och Office 365. Men också att se till att både kunden och användaren fick det som de behövde och ville ha, och att hjälpa designers genom att komma med förslag på UX och visa vad som är tekniskt möjligt. Vi hade några praktikanter som jag fick handleda.',
+      ],
+    },
+    {
+      title: 'Frilanskonsult',
+      company: 'Enskild firma',
+      date: ['10/2023', 'Pågående'],
+      location: '',
+      description: [
+        'Driver en enskild firma där jag erbjuder utveckling och vidareutveckling av hemsidor och digitala tjänster, content-moderering och teknisk support. Mitt fokus ligger på att leverera exceptionell service och lösningar som är anpassade efter kundens behov och önskemål.',
       ],
     },
     {
