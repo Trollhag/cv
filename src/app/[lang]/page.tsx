@@ -8,7 +8,10 @@ import PhoneIcon from '@/public/icons/phone.svg'
 import PinIcon from '@/public/icons/pin.svg'
 import portrait from '@/public/portrait.jpg'
 
-export default async function Page({ params }: { params: { lang: keyof typeof languages } }) {
+export default async function Page(
+  props: Readonly<{ params: Promise<{ lang: keyof typeof languages }> }>,
+) {
+  const params = await props.params
   const lang: (typeof languages)[keyof typeof languages] = await import(`@/lang/${params.lang}`)
 
   const headerList: LinkTreeItem[] = [

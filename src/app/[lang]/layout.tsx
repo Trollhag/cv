@@ -25,16 +25,16 @@ export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'sv' }]
 }
 
-export default function Layout({
-  children,
-  params,
-}: Readonly<{ children: ReactNode; params: { lang: string } }>) {
+export default async function Layout(
+  props: Readonly<{ children: ReactNode; params: Promise<{ lang: string }> }>,
+) {
+  const params = await props.params
   return (
     <html lang={params.lang}>
       <body
         className={`${inter.className} bg-white dark:bg-slate-900 min-h-screen pt-4 sm:pt-20 pb-20 sm:pb-4 print:p-0`}
       >
-        {children}
+        {props.children}
         <Actions />
       </body>
     </html>
