@@ -21,12 +21,12 @@ export default async function Page(
       href: 'mailto:oscar@trollhag.com',
       target: '_blank',
     },
-    {
-      icon: <PhoneIcon className="inline-block" />,
-      text: '+46 762 72 99 13',
-      href: 'tel:+46 762 72 99 13',
-      target: '_blank',
-    },
+    // {
+    //   icon: <PhoneIcon className="inline-block" />,
+    //   text: '+46 762 72 99 13',
+    //   href: 'tel:+46 762 72 99 13',
+    //   target: '_blank',
+    // },
     {
       icon: <PinIcon className="inline-block" />,
       text: lang.general.location,
